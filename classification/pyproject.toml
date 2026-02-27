@@ -1,0 +1,46 @@
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Add your project dependencies here
+    # Example:
+    # "numpy>=1.24.0",
+    # "pandas>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# Optional: Custom package indexes for specific dependencies
+# [tool.uv.sources]
+# torch = { index = "pytorch" }
+# torchvision = { index = "pytorch" }
+
+# Optional: Custom package index configuration
+# [[tool.uv.index]]
+# name = "pytorch"
+# url = "https://download.pytorch.org/whl/cpu"
+# explicit = true
+
+[tool.ty.rules]
+unresolved-import = "ignore"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle (error)
+    "F",   # pyflakes
+    "B",   # bugbear
+    "B9",
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "I",   # isort
+    "UP",  # pyupgrade
+    "PIE", # flake8-pie
+    "PGH", # pygrep-hooks
+    "PYI", # flake8-pyi
+    "RUF",
+]

@@ -1,0 +1,3 @@
+python-version = "3.12.0"
+ignore-missing-imports = ["*"]
+untyped-def-behavior = "skip-and-infer-return-any"
